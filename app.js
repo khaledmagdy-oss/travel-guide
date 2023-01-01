@@ -32,7 +32,7 @@ app.get('/login', function (req, res) {
 });
 
 app.post('/login', function (req, res) {
-  MongoClient.connect("mongodb://127.0.0.1", function (err, client) {
+  MongoClient.connect("mongodb+srv://admin:admin@travelguide.vrzispt.mongodb.net/test", function (err, client) {
     if (err) throw err;
     var db = client.db('Credentials');
     db.collection('User info').findOne({ username: req.body.username, password: req.body.password }, function (err, result) {
@@ -53,7 +53,7 @@ app.get('/registration', function (req, res) {
 });
 
 app.post('/register', function (req, res) {
-  MongoClient.connect("mongodb://127.0.0.1", function (err, client) {
+  MongoClient.connect("mongodb+srv://admin:admin@travelguide.vrzispt.mongodb.net/test", function (err, client) {
     if (err) throw err;
     var db = client.db('Credentials');
     db.collection('User info').findOne({ username: req.body.username }, function (err, result) {
@@ -143,7 +143,7 @@ app.get('/wanttogo', function (req, res) {
   let annapurnaH = "hidden";
   let santoriniH = "hidden";
   let romeH = "hidden";
-  MongoClient.connect("mongodb://127.0.0.1", function (err, client) {
+  MongoClient.connect("mongodb+srv://admin:admin@travelguide.vrzispt.mongodb.net/test", function (err, client) {
     if (err) throw err;
     var db = client.db('Credentials');
     db.collection('User info').findOne(
@@ -236,7 +236,7 @@ app.post('/search', function (req, res) {
 
 app.post('/addInca', function (req, res) {
   if(req.session.username){
-    MongoClient.connect("mongodb://127.0.0.1", function (err, client) {
+    MongoClient.connect("mongodb+srv://admin:admin@travelguide.vrzispt.mongodb.net/test", function (err, client) {
     if (err) throw err;
     var db = client.db('Credentials');
     db.collection('User info').findOne(
@@ -269,7 +269,7 @@ app.post('/addInca', function (req, res) {
 
 app.post('/addAnnapurna', function (req, res) {
   if(req.session.username){
-    MongoClient.connect("mongodb://127.0.0.1", function (err, client) {
+    MongoClient.connect("mongodb+srv://admin:admin@travelguide.vrzispt.mongodb.net/test", function (err, client) {
     if (err) throw err;
     var db = client.db('Credentials');
     db.collection('User info').findOne(
@@ -302,7 +302,7 @@ app.post('/addAnnapurna', function (req, res) {
 
 app.post('/addParis', function (req, res) {
   if(req.session.username){
-    MongoClient.connect("mongodb://127.0.0.1", function (err, client) {
+    MongoClient.connect("mongodb+srv://admin:admin@travelguide.vrzispt.mongodb.net/test", function (err, client) {
     if (err) throw err;
     var db = client.db('Credentials');
     db.collection('User info').findOne(
@@ -335,7 +335,7 @@ app.post('/addParis', function (req, res) {
 
 app.post('/addRome', function (req, res) {
   if(req.session.username){
-    MongoClient.connect("mongodb://127.0.0.1", function (err, client) {
+    MongoClient.connect("mongodb+srv://admin:admin@travelguide.vrzispt.mongodb.net/test", function (err, client) {
     if (err) throw err;
     var db = client.db('Credentials');
     db.collection('User info').findOne(
@@ -368,7 +368,7 @@ app.post('/addRome', function (req, res) {
 
 app.post('/addBali', function (req, res) {
   if(req.session.username){
-    MongoClient.connect("mongodb://127.0.0.1", function (err, client) {
+    MongoClient.connect("mongodb+srv://admin:admin@travelguide.vrzispt.mongodb.net/test", function (err, client) {
     if (err) throw err;
     var db = client.db('Credentials');
     db.collection('User info').findOne(
@@ -401,7 +401,7 @@ app.post('/addBali', function (req, res) {
 
 app.post('/addSantorini', function (req, res) {
   if(req.session.username){
-    MongoClient.connect("mongodb://127.0.0.1", function (err, client) {
+    MongoClient.connect("mongodb+srv://admin:admin@travelguide.vrzispt.mongodb.net/test", function (err, client) {
     if (err) throw err;
     var db = client.db('Credentials');
     db.collection('User info').findOne(
